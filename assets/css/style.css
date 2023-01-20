@@ -31,6 +31,7 @@ textarea {
 }
 
 .row {
+  justify-content: center;
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
@@ -68,9 +69,11 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  width: 70px;
+  
 }
 
 .saveBtn:hover {
-  font-size: 20px;
+  font-size: 30px;
   transition: all 0.3s ease-in-out;
 }
