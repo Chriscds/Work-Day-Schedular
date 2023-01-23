@@ -6,19 +6,19 @@ var currentDay = moment().format("dddd, MMMM Do");
 // Set variable for save button .saveBTN and textarea .hourSlot
 var saveTextBtn = $(".saveBtn");
 var textInSlot = $(".hourSlot1");
-
+// var hourText = localStorage.getItem("hour1");
 
 // Create event listener function using Jquery to store textarea value.
 saveTextBtn.on("click", function() {
-console.log(textInSlot.val());
-textInSlot.text(textInSlot.val());
+// console.log(textInSlot.val());
+// textInSlot.text(textInSlot.val());
 
 // create function for time. loop or if statment?
 var hourClass = $(".hour");
 
 // Local storage
-$(".hourSlot1").val(localStorage).getItem("hourSlot1");
-
+// $(".hour1 .hourSlot1").val(localStorage.getItem(".hourSlot1"));
+// localStorage.setItem("hour1", textInSlot);
 
 });
 
