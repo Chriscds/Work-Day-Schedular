@@ -5,26 +5,20 @@ var currentDay = moment().format("dddd, MMMM Do");
 
 // Set variable for save button .saveBTN and textarea .hourSlot
 var saveTextBtn = $(".saveBtn");
-var textInSlot = $(".hourSlot");
+var textInSlot = $(".hourSlot1");
 
 
 // Create event listener function using Jquery to store textarea value.
 saveTextBtn.on("click", function() {
-//  alert("Save Success");
 console.log(textInSlot.val());
 textInSlot.text(textInSlot.val());
 
-// POSSIBLE LOOP THROUGH OF TEXT AREA VALUES 
-// TO SEE WHAT NEEDS SAVING WHEN SaveTextBtn is clicked!!!
-var textInput = $('textarea:input');
-var textValue =[];
+// create function for time. loop or if statment?
+var hourClass = $(".hour");
 
-$.each(textInput, function() {
-    textValue.push($(this).val());
-});
+// Local storage
+$(".hourSlot1").val(localStorage).getItem("hourSlot1");
 
-// keep clear if no input
-$('textarea[type="text"]').val('', false);
 
 });
 
