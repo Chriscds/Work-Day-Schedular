@@ -5,7 +5,7 @@ var currentDay = moment().format("dddd, MMMM Do");
 
 // Set variable for save button .saveBTN and textarea .hourSlot
 var saveTextBtn = $(".saveBtn");
-var textInSlot = $(".hourSlot1");
+var textInSlot = $(".hourSlot");
 // var hourText = localStorage.getItem("hour1");
 
 // Create event listener function using Jquery to store textarea value.
@@ -15,6 +15,18 @@ saveTextBtn.on("click", function() {
 
 // create function for time. loop or if statment?
 var hourClass = $(".hour");
+var timeNow;
+
+for (var i = 9; i < 17; i++) {
+    if ( == i) {
+        timeNow = '.present'; // check for class marker
+    } else if ( > i) {
+        timeNow = '.future'; 
+    } else if ( < i) {
+        timeNow = '.past';
+    }
+}
+
 
 // Local storage
 // $(".hour1 .hourSlot1").val(localStorage.getItem(".hourSlot1"));
