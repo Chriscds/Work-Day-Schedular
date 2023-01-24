@@ -17,7 +17,7 @@ The time slots will show different colours depending on whether the hour time sl
 ![Work Day Scheduler](assets/images/Work-Day-Scheduler-screenshot.png)
 
 ## Usage
-You can view the work day scheduler [here]()
+You can view the work day scheduler [here](https://chriscds.github.io/Work-Day-Schedular/index.html)
 
 ## Licence
 Please refer to the LICENCE in the repository.
