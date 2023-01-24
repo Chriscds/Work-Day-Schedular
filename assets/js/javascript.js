@@ -7,30 +7,34 @@ var currentDay = moment().format("dddd, MMMM Do");
 var saveTextBtn = $(".saveBtn");
 var textInSlot = $(".hourSlot");
 // var hourText = localStorage.getItem("hour1");
-
+$(".hour .hourSlot").val(localStorage.getItem("hourEleven"));
 // Create event listener function using Jquery to store textarea value.
 saveTextBtn.on("click", function() {
+
 // console.log(textInSlot.val());
 // textInSlot.text(textInSlot.val());
 
-// create function for time. loop or if statment?
+// create function for time. loop or if statment
 var hourClass = $(".hour");
-var timeNow;
+
 
 for (var i = 9; i < 17; i++) {
-    if ( == i) {
-        timeNow = '.present'; // check for class marker
-    } else if ( > i) {
-        timeNow = '.future'; 
-    } else if ( < i) {
-        timeNow = '.past';
+    var currentTime = moment().add("hour").format("HH");
+    var timeNow;
+    if (currentTime == i) {
+        timeNow = 'present'; // check for class marker
+    } else if (currentTime > i) {
+        timeNow = 'future'; 
+    } else if (currentTime < i) {
+        timeNow = 'past';
     }
 }
 
 
 // Local storage
-// $(".hour1 .hourSlot1").val(localStorage.getItem(".hourSlot1"));
-// localStorage.setItem("hour1", textInSlot);
+// localStorage.setItem('#hourEleven', textInSlot);
+// textInSlot = localStorage.getItem('#hourEleven');
+
 
 });
 
