@@ -1,4 +1,4 @@
-# Work-Day-Schedular
+# Work-Day-Scheduler
 Calendar application for a Work Day Schedule.
 
 ## Description
