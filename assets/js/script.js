@@ -9,22 +9,26 @@ var textInSlot = $(".hourSlot");
 
 // Color hourSlot text according to past, present, or future.
 var currentHour = moment().format("H");
+console.log(currentHour); // check if currentHour is valid.
 
 // Append time and color to divs? 
-for (var i = 9; i < 17; i++) { 
-    var hour;
-    if (currentHour == i) {
-        hour = 'present';
-    } else if (currentHour > i) {
-        hour = 'future';
-    } else if (currentHour < i) {
-        hour = 'past';
+
+// Testing --------------------------------
+    // for loop to add class to textarea div with .add
+for (var i = 0; i < 18; i++) {
+    if (i < currentHour) {
+        $('.hourSlot').addClass('past');
+    }  else if (i === currentHour) {
+        $('.hourSlot').addClass('present');
+    } else if (i > currentHour) {
+        $('.hourSlot').addClass('future');
     }
+};
 
     // Add color class to textarea
-    var timeColors = '<textarea class= hourSlot ${currentHour}></textarea>'; 
-    $(".time-block").append(timeColors);
-};
+    // var timeColors = '<textarea class= hourSlot ${currentHour}></textarea>'; 
+    // $(".time-block").append(timeColors);
+
 
 
 
