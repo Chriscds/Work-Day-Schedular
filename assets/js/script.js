@@ -15,13 +15,16 @@ console.log(currentHour); // check if currentHour is valid.
 
 // Testing --------------------------------
     // for loop to add class to textarea div with .add
-for (var i = 0; i < 18; i++) {
+for (var i = 9; i < 18; i++) {
     if (i < currentHour) {
         $('.hourSlot').addClass('past');
-    }  else if (i === currentHour) {
+       
+    }  else if (i == currentHour) {
         $('.hourSlot').addClass('present');
+        // $('.time-block').children().eq().addClass('present');
     } else if (i > currentHour) {
         $('.hourSlot').addClass('future');
+        // $('.time-block').children().eq().addClass('future');
     }
 };
 
